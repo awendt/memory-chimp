@@ -18,7 +18,7 @@ Board.prototype.draw = function(num_circles) {
   this.empty();
 
   var free_boxes = [{x: 0, y: 0, width: this.canvas.width(), height: this.canvas.height()}];
-  var radius = 50;
+  var radius = 130;
 
   var calculate_free_boxes_within = function(box, draw_at) {
     var boxes = [];
@@ -69,7 +69,7 @@ Board.prototype.draw = function(num_circles) {
     );
     this.text_nodes.push(group
       .plain((index+1).toString())
-      .font({family: 'Arial, Helvetica, sans-serif', size: 30})
+      .font({family: 'Arial, Helvetica, sans-serif', size: 64})
       .center(x+(radius/2), y+(radius/2))
       .fill({color: '#69B6D1'})
       .data('index', index)
@@ -98,8 +98,10 @@ Board.prototype.draw = function(num_circles) {
   }
 
   this.text_nodes[0].on('click', check_click(this));
+  this.text_nodes[0].on('touchstart', check_click(this));
   for (index=0; index < this.text_nodes.length; ++index) {
     this.circles[index].on('click', check_click(this));
+    this.circles[index].on('touchstart', check_click(this));
   }
 };
 
