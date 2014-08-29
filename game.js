@@ -8,7 +8,9 @@ board.on('done', function() {
   var level_banana = document.getElementById("level"+level);
   level_banana.className = level_banana.className + " done";
   level += 1;
-  board.draw(level);
+  setTimeout(function() {
+    board.draw(level);
+  }, 500);
 });
 board.on('fail', function() {
   alert("YOU LOSE!");
