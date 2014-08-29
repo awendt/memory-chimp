@@ -16,6 +16,8 @@ board.on('fail', function() {
   alert("YOU LOSE!");
 });
 
+document.body.addEventListener('touchmove', function(e){ e.preventDefault(); });
+
 // Responsibilities:
 // 1. Drawing
 // 2. User input (correct move, wrong move)
