@@ -11,13 +11,13 @@ body {
 
 .level {
   margin:5px;
-  min-height: 30px;
-  max-height: 30px;
-  width: 42px;
+  min-height: 93px;
+  max-height: 93px;
+  width: 85px;
   background:url(sprites.png) no-repeat;
   display: inline-block;
 }
 
 .level.done {
-  background-position:0 -30px;
+  background-position:0 -93px;
 }
