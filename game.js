@@ -13,7 +13,12 @@ board.on('done', function() {
   }, 500);
 });
 board.on('fail', function() {
-  alert("YOU LOSE!");
+  document.getElementById('game_over').className = 'active';
+});
+
+document.getElementById('retry').addEventListener('click', function() {
+  document.getElementById('game_over').className = '';
+  board.draw(level);
 });
 
 document.body.addEventListener('touchmove', function(e){ e.preventDefault(); });

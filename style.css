@@ -2,6 +2,7 @@ body {
   padding:0;
   margin:0;
   overflow:hidden;
+  font-family: Helvetica, Arial, 'sans-serif';
 }
 
 .levels {
@@ -20,4 +21,36 @@ body {
 
 .level.done {
   background-position:0 -93px;
+}
+
+#game_over {
+  display:none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color:#eee;
+  opacity: 0.7;
+}
+
+#game_over.active {
+  display: block;
+}
+
+#game_over div {
+  margin:20% auto;
+  width: 40%;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: center;
+}
+
+#game_over h1 {
+  font-size: 3.5em;
+}
+
+#game_over button {
+  font-size: 2em;
 }
