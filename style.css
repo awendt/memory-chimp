@@ -7,7 +7,7 @@ body {
 }
 
 .levels {
-  margin:0 auto;
+  margin:10px auto;
   display: table;
 }
 
@@ -63,6 +63,7 @@ body {
   padding:0 20px;
   height: 93px;
   vertical-align: middle;
+  font-size: 2em;
 }
 
 #instructions.hide {
