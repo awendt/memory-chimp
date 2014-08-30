@@ -79,7 +79,9 @@ Board.prototype.draw = function(num_circles) {
   var check_click = function(board) {
     return function() {
       if (board.circles.length === num_circles) {
-        // remove all text_nodes if this is the first move
+        // first move
+        board.handlers.start();
+        // remove all text_nodes
         for (index=0; index < board.text_nodes.length; ++index) {
           board.text_nodes[index].remove();
         }

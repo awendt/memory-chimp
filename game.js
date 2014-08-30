@@ -4,6 +4,9 @@ var canvas = SVG('canvas').size(window.innerWidth, window.innerHeight-109);
 var board = new Board(canvas);
 var level = 4;
 board.draw(level);
+board.on('start', function() {
+  document.getElementById('instructions').className = 'hide'
+});
 board.on('done', function() {
   var level_banana = document.getElementById("level"+level);
   level_banana.className = level_banana.className + " done";

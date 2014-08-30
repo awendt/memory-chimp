@@ -17,7 +17,7 @@ body {
   max-height: 93px;
   width: 85px;
   background:url(sprites.png) no-repeat;
-  display: inline-block;
+  display: table-cell;
 }
 
 .level.done {
@@ -53,5 +53,18 @@ body {
 }
 
 #game_over button {
-  font-size: 2em;
+  font-size: 2.5em;
+}
+
+#instructions {
+  display: table-cell;
+  color: #675647;
+  margin:0;
+  padding:0 20px;
+  height: 93px;
+  vertical-align: middle;
+}
+
+#instructions.hide {
+  visibility: hidden;
 }
