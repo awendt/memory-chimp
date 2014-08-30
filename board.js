@@ -62,8 +62,8 @@ Board.prototype.draw = function(num_circles) {
     var y = targets[index].y;
     this.circles.push(group
       .circle(radius)
-      .stroke({color: '#69B6D1', width: '5'})
-      .fill({color: '#E6DBCA'})
+      .stroke({color: '#675647', width: '10'})
+      .fill({color: '#EEC05E'})
       .move(x, y)
       .data('index', index)
     );
@@ -71,7 +71,7 @@ Board.prototype.draw = function(num_circles) {
       .plain((index+1).toString())
       .font({family: 'Arial, Helvetica, sans-serif', size: 64})
       .center(x+(radius/2), y+(radius/2))
-      .fill({color: '#69B6D1'})
+      .fill({color: '#675647'})
       .data('index', index)
     );
   }
