@@ -2,12 +2,15 @@
 
 var canvas = SVG('canvas').size(window.innerWidth, window.innerHeight-113);
 var board = new Board(canvas);
+var stopwatch = new StopWatch({delay: 5, timer: document.getElementById('instructions')});
 var level = 4;
 board.draw(level);
 board.on('start', function() {
-  document.getElementById('instructions').className = 'hide'
+  stopwatch.reset();
+  stopwatch.start();
 });
 board.on('done', function() {
+  stopwatch.stop();
   var level_banana = document.getElementById("level"+level);
   level_banana.className = level_banana.className + " done";
   level += 1;
@@ -16,6 +19,7 @@ board.on('done', function() {
   }, 500);
 });
 board.on('fail', function() {
+  stopwatch.stop();
   document.getElementById('game_over').className = 'active';
 });
 

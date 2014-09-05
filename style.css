@@ -7,7 +7,7 @@ body {
 }
 
 .levels {
-  margin:10px auto;
+  margin:10px;
   display: table;
 }
 
@@ -64,8 +64,4 @@ body {
   height: 93px;
   vertical-align: middle;
   font-size: 2em;
-}
-
-#instructions.hide {
-  visibility: hidden;
 }
