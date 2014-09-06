@@ -17,7 +17,7 @@ Board.prototype.empty = function() {
 Board.prototype.draw = function(num_circles) {
   this.empty();
 
-  var free_boxes = [{x: 0, y: 0, width: this.canvas.width(), height: this.canvas.height()}];
+  var free_boxes = [{x: 10, y: 10, width: this.canvas.width()-15, height: this.canvas.height()-15}];
   var radius = 150;
 
   var calculate_free_boxes_within = function(box, draw_at) {

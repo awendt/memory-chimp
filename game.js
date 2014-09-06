@@ -1,6 +1,6 @@
 // http://www.colourlovers.com/palette/3459622/Flowering_Tiles
 
-var canvas = SVG('canvas').size(window.innerWidth, window.innerHeight-113);
+var canvas = SVG('canvas').size(window.innerWidth-40, window.innerHeight-document.getElementById('canvas').offsetTop-20);
 var board = new Board(canvas);
 var stopwatch = new StopWatch({delay: 5, timer: document.getElementById('instructions')});
 var level = 4;
