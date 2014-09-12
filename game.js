@@ -1,5 +1,3 @@
-// http://www.colourlovers.com/palette/3459622/Flowering_Tiles
-
 var $elements = {
   game_over: document.getElementById('game_over'),
   you_won: document.getElementById('you_won'),
