@@ -24,7 +24,7 @@ body {
   background-position:0 -93px;
 }
 
-#game_over {
+.overlay {
   display:none;
   position: absolute;
   top: 0;
@@ -36,11 +36,11 @@ body {
   opacity: 0.7;
 }
 
-#game_over.active {
+.overlay.active {
   display: block;
 }
 
-#game_over div {
+.overlay div {
   margin:20% auto;
   width: 40%;
   min-width: 300px;
@@ -48,11 +48,11 @@ body {
   text-align: center;
 }
 
-#game_over h1 {
+.overlay h1 {
   font-size: 3.5em;
 }
 
-#game_over button {
+.overlay button {
   font-size: 2.5em;
 }
 
