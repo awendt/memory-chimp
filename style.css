@@ -10,7 +10,7 @@ body {
 .levels {
   margin:10px;
   display: table;
-  border-spacing: 5px;
+  border-spacing: 2px;
 }
 
 .level {
@@ -67,16 +67,25 @@ body {
   font-size: 1.8em;
 }
 
-.scores-container {
+#instructions.game-started {
+  visibility: hidden;
+}
+
+#scoreboard {
   position: absolute;
-  top: 0;
+  top: -300px;
   right:10px;
   font-size: 4em;
   display: table;
   border-spacing: 5px 0;
 }
 
-.scores-container div {
+#scoreboard.slide-in {
+  top: 0;
+  transition: 200ms;
+}
+
+#scoreboard div {
   background-color: #675647;
   color: #EEC05E;
   padding:10px 10px 10px;
@@ -84,7 +93,7 @@ body {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   text-align: center;
-  min-width: 200px;
+  min-width: 170px;
   display: table-cell;
 }
 

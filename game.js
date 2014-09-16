@@ -1,10 +1,11 @@
 var $elements = {
   game_over: document.getElementById('game-over'),
   you_won: document.getElementById('you-won'),
+  instructions: document.getElementById('instructions')
 };
 var canvas = SVG('canvas').size(window.innerWidth-40, window.innerHeight-document.getElementById('canvas').offsetTop-20);
 var board = new Board(canvas);
-var stopwatch = new StopWatch({delay: 5, timer: document.getElementById('instructions')});
+var stopwatch = new StopWatch({delay: 5, timer: $elements.instructions});
 var level = 4;
 var MAX_LEVEL = 9;
 var scoreboard = new Scoreboard({
@@ -14,6 +15,10 @@ var scoreboard = new Scoreboard({
 
 board.draw(level);
 board.on('start', function() {
+  if (level == 4) {
+    document.getElementById('scoreboard').classList.add("slide-in");
+    $elements.instructions.classList.add("game-started");
+  }
   stopwatch.reset();
   stopwatch.start();
 });
