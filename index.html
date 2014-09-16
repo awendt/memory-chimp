@@ -7,6 +7,10 @@
     <script src="svg.min.js" type="text/javascript"></script>
   </head>
   <body>
+    <div class="scores-container">
+      <div id="score-container">0</div>
+      <div id="best-container">0</div>
+    </div>
     <div class="levels">
       <div class="level" id="level4"></div>
       <div class="level" id="level5"></div>
@@ -14,23 +18,24 @@
       <div class="level" id="level7"></div>
       <div class="level" id="level8"></div>
       <div class="level" id="level9"></div>
-      <h2 id="instructions">Tap the numbers in order</h2>
+      <h2 id="instructions">Tap the numbers in&nbsp;order!</h2>
     </div>
     <div id="canvas"></div>
-    <div id="game_over" class="overlay">
+    <div id="game-over" class="overlay">
       <div>
         <h1>Game over!</h1>
         <button id="retry">Retry this level</button>
       </div>
     </div>
-    <div id="you_won" class="overlay">
+    <div id="you-won" class="overlay">
       <div>
         <h1>Congrats,<br />you won!</h1>
-        <button id="start_over">Start over</button>
+        <button id="start-over">Start over</button>
       </div>
     </div>
   </body>
   <script src="board.js" type="text/javascript" charset="utf-8"></script>
+  <script src="scoreboard.js" type="text/javascript" charset="utf-8"></script>
   <script src="stopwatch.js" type="text/javascript" charset="utf-8"></script>
   <script src="game.js" type="text/javascript" charset="utf-8"></script>
 </html>

@@ -1,12 +1,16 @@
 var $elements = {
-  game_over: document.getElementById('game_over'),
-  you_won: document.getElementById('you_won'),
+  game_over: document.getElementById('game-over'),
+  you_won: document.getElementById('you-won'),
 };
 var canvas = SVG('canvas').size(window.innerWidth-40, window.innerHeight-document.getElementById('canvas').offsetTop-20);
 var board = new Board(canvas);
 var stopwatch = new StopWatch({delay: 5, timer: document.getElementById('instructions')});
 var level = 4;
 var MAX_LEVEL = 9;
+var scoreboard = new Scoreboard({
+  score: document.getElementById('score-container'),
+  best: document.getElementById('best-container')
+})
 
 board.draw(level);
 board.on('start', function() {
@@ -15,6 +19,7 @@ board.on('start', function() {
 });
 board.on('done', function() {
   stopwatch.stop();
+  scoreboard.add(Math.round(100000/stopwatch.elapsed()*level));
   document.getElementById("level"+level).classList.add("done");
   if (level == MAX_LEVEL) {
     $elements.you_won.classList.add("active");
@@ -30,7 +35,7 @@ board.on('fail', function() {
   $elements.game_over.classList.add("active");
 });
 
-document.getElementById('start_over').addEventListener('click', function() {
+document.getElementById('start-over').addEventListener('click', function() {
   location.reload();
 });
 

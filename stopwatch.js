@@ -38,5 +38,8 @@ StopWatch.prototype.delta = function() {
 };
 
 StopWatch.prototype.render = function() {
-  this.timer.innerHTML = this.clock/1000;
-}
+};
+
+StopWatch.prototype.elapsed = function() {
+  return this.clock;
+};
