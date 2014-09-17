@@ -8,7 +8,7 @@ function Scoreboard(options) {
   try {
     this.best = localStorage.getItem(this.storage_key) || 0;
   } catch (e) {
-    // let's fail silently
+    this.best = 0;
   }
 
   this.score = 0;
