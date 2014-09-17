@@ -1,29 +1,29 @@
 body {
   color: #675647;
   padding:20px;
-  margin:0;
   overflow:hidden;
   font-family: Helvetica, Arial, 'sans-serif';
   background-color: #BDBD9F;
+  width: 500px;
+  margin: 0 auto;
 }
 
 .levels {
-  margin:10px;
+  margin:10px auto;
   display: table;
-  border-spacing: 2px;
 }
 
 .level {
   margin:5px;
-  min-height: 93px;
-  max-height: 93px;
-  width: 85px;
+  min-height: 30px;
+  max-height: 30px;
+  width: 42px;
   background:url(sprites.png) no-repeat;
-  display: table-cell;
+  display: inline-block;
 }
 
 .level.done {
-  background-position:0 -93px;
+  background-position:0 -30px;
 }
 
 .overlay {
@@ -64,7 +64,7 @@ body {
   padding:0 20px;
   height: 93px;
   vertical-align: middle;
-  font-size: 1.8em;
+  font-size: 1.7em;
 }
 
 #instructions.game-started {
