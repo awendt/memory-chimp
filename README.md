@@ -8,6 +8,10 @@ See this video for an explanation:
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/zsXP8qeFF6A/0.jpg)](http://www.youtube.com/watch?v=zsXP8qeFF6A)
 
+## Contributions
+
+  * [Nadeesha Cabral](https://github.com/ncthis) added graceful degradation in case localStorage is unavailable
+
 ## Contributing
 
 Changes and improvements are more than welcome! Feel free to fork and open a pull request. Please make your changes in a specific branch and request to pull into `master`! If you can, please make sure the game fully works before sending the PR, as that will help speed up the process.
