@@ -24,7 +24,7 @@ board.on('start', function() {
 });
 board.on('done', function() {
   stopwatch.stop();
-  scoreboard.add(Math.round(100000/stopwatch.elapsed()*level));
+  scoreboard.add(Math.round(20000/stopwatch.elapsed()*level*level));
   document.getElementById("level"+level).classList.add("done");
   if (level == MAX_LEVEL) {
     $elements.you_won.classList.add("active");
