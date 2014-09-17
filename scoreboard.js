@@ -4,7 +4,13 @@ function Scoreboard(options) {
     score: options.score
   };
   this.storage_key = 'personal_best'
-  this.best = localStorage.getItem(this.storage_key) || 0;
+
+  try {
+    this.best = localStorage.getItem(this.storage_key) || 0;
+  } catch (e) {
+    this.best = 0;
+  }
+
   this.score = 0;
   this.render();
 };
@@ -13,7 +19,12 @@ Scoreboard.prototype.add = function(points) {
   this.score += points;
   if (this.best < this.score) {
     this.best = this.score;
-    localStorage.setItem(this.storage_key, this.best);
+
+    try {
+      localStorage.setItem(this.storage_key, this.best);
+    } catch (e) {
+      // let's fail silently
+    }
   }
   this.render();
 };
