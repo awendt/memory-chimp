@@ -13,15 +13,18 @@ var scoreboard = new Scoreboard({
   best: document.getElementById('best-container')
 })
 
-board.draw(level);
+board.on('draw', function() {
+  stopwatch.reset();
+  stopwatch.start();
+});
+
 board.on('start', function() {
   if (level == 4) {
     document.getElementById('scoreboard').classList.add("slide-in");
     $elements.instructions.classList.add("game-started");
   }
-  stopwatch.reset();
-  stopwatch.start();
 });
+
 board.on('done', function() {
   stopwatch.stop();
   scoreboard.add(Math.round(20000/stopwatch.elapsed()*level*level));
@@ -35,10 +38,13 @@ board.on('done', function() {
     }, 500);
   }
 });
+
 board.on('fail', function() {
   stopwatch.stop();
   $elements.game_over.classList.add("active");
 });
+
+board.draw(level);
 
 document.getElementById('start-over').addEventListener('click', function() {
   location.reload();
