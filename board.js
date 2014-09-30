@@ -105,6 +105,8 @@ Board.prototype.draw = function(num_circles) {
     this.circles[index].on('click', check_click(this));
     this.circles[index].on('touchstart', check_click(this));
   }
+
+  board.handlers.draw();
 };
 
 Board.prototype.on = function(input, fn) {
