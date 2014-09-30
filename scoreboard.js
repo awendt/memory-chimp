@@ -3,7 +3,7 @@ function Scoreboard(options) {
     best: options.best,
     score: options.score
   };
-  this.storage_key = 'personal_best'
+  this.storage_key = 'memchimp.personal_best'
 
   try {
     this.best = localStorage.getItem(this.storage_key) || 0;
